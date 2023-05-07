@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "teseus"
-version = "0.1.0"
+version = "0.1.1"
 description = "Test Server for us"
 authors = ["aYukiYoshida <yuki.yoshida@access-company.com>"]
 license = "MIT"

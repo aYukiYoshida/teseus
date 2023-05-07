@@ -21,7 +21,7 @@ def login():
     if request.method == 'GET':
         return render_template('login.html')
     else:
-        accessed_user = User(request.form.get('name', 'dummy'),
+        accessed_user = User(request.form.get('username', 'dummy'),
                              request.form.get('password', 'dummy'))
         status = 'succeeded' if accessed_user == auth.user else 'failed'
         return render_template('login.html', status=status)
@@ -29,7 +29,7 @@ def login():
 
 @app.route('/status', methods=['POST'])
 def status():
-    accessed_user = User(request.form.get('name', 'dummy'),
+    accessed_user = User(request.form.get('username', 'dummy'),
                          request.form.get('password', 'dummy'))
     status = 'succeeded' if accessed_user == auth.user else 'failed'
     return render_template('status.html', status=status)
